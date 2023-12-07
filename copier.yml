@@ -29,7 +29,7 @@ enable_data_governance:
   default: false
 
 execution_environment:
-  type: bool
+  type: str
   help: Whare would you like to execute your transformation?
   default: spark
   choices:
