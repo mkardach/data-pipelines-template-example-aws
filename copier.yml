@@ -1,0 +1,68 @@
+project_name:
+  type: str
+  help: Name of the project (use alphanumeric characters with _)
+  default: my_new_project
+
+project_description:
+  type: str
+  help: Short project description
+  default: Project for transforming data
+
+TODO
+# gcp_dev_project_id:
+#   type: str
+#   help: Project id used in GCP as development environment
+
+# gcp_prod_project_id:
+#   type: str
+#   help: Project id used in GCP as production environment
+
+pipeline_owner:
+  type: str
+  help: Owner of the pipeline in airflow
+  default: DataOps Team
+
+schedule_interval:
+  type: str
+  help: Cron expression
+  default: 0 12 * * *
+
+schema:
+  type: str
+  help: Name of the schema
+  default: presentation
+
+enable_data_governance:
+  type: bool
+  help: Would you like to use DataHub for colecting metadata?
+  default: false
+
+execution_environment:
+  type: bool
+  help: Whare would you like to execute your transformation?
+  default: spark
+  choices:
+        - spark
+        - snowflake
+
+_exclude:
+  - .git
+  - .github
+
+_skip_if_exists:
+  - models
+  - tests
+
+_min_copier_version: "7.0.1"
+
+_templates_suffix: .tmpl
+
+_envops:
+  autoescape: false
+  block_end_string: "%]"
+  block_start_string: "[%"
+  comment_end_string: "#]"
+  comment_start_string: "[#"
+  keep_trailing_newline: true
+  variable_end_string: "]]"
+  variable_start_string: "[["

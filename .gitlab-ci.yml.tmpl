@@ -1,0 +1,17 @@
+services:
+  - name: docker:19.03.13-dind
+
+include:
+ TODO...
+  - https://raw.githubusercontent.com/getindata/gitlab_cicd_templates/v0.1.14/dataops/gcp/gcp_setup_template.yml
+  - https://raw.githubusercontent.com/getindata/gitlab_cicd_templates/v0.1.14/dataops/cicd_template.yml
+
+variables:
+  TODO
+  DOCKER_REGISTRY: europe-central2-docker.pkg.dev
+  BLOB_CONFIG_PATH: blob_args.json
+  GCP_PROJECT: $GCP_PROJECT
+
+stages:
+  - execute-dev
+  - execute-release
