@@ -8,3 +8,6 @@ logs/
 
 # data-pipelines-cli
 /build/
+
+metastore_db
+derby.log

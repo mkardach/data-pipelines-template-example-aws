@@ -3,17 +3,9 @@
 image_pull_policy: IfNotPresent
 namespace: default
 
-#TODO
 secrets:
-  - secret: service-account
-    deploy_type: volume
-    deploy_target: /var
-    key: gc-key.json
-
-#TODO
-#envs:
-#  GCP_KEY_PATH: "/var/gc-key.json"
-#  GCP_PROJECT: [[ gcp_dev_project_id ]]
+  - secret: account_credentials
+    deploy_type: env
 
 labels:
   runner: airflow
