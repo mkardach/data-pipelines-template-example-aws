@@ -8,8 +8,6 @@ source:
     sources_path: "./target/sources.json"
 
     target_platform: "[[ execution_environment ]]"
-    disable_dbt_node_creation: True
-    load_schemas: True
     env: "DEV"
 
 transformers:
@@ -31,5 +29,5 @@ transformers:
 sink:
   type: "datahub-rest"
   config:
-    server: "https://gms.gid-labs-dlz-core-dev.getindata.dev"
-TODO: change url
+    server: "https://gms.lakehouse-demo.getindata.dev"
+    token: ${DATAHUB_TOKEN}

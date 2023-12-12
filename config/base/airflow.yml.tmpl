@@ -22,3 +22,14 @@ dags_path: "s3://pp-deployment-test/[[ project_name ]]"
 manifest_file_name: manifest.json
 seed_task: False
 use_task_group: True
+
+
+#failure_handlers:
+#  - type: slack
+#    connection_id: slack_failure
+#    message_template: |
+#        :red_circle: Task Failed.
+#        *Task*: {task}
+#        *Dag*: {dag}
+#        *Execution Time*: {execution_time}
+#        *Log Url*: {url}
