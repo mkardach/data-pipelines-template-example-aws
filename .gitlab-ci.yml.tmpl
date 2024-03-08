@@ -12,7 +12,7 @@ variables:
   AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
   AWS_REGION: eu-central-1
   GITLAB_CICD_IMAGE_TAG: aws-0.5.7
-  DATAHUB_GMS_URL: "https://datahub-gms.lakehouse-demo.getindata.dev"
+  DATAHUB_GMS_URL: $DATAHUB_GMS_URL
 
 stages:
   - execute-dev
