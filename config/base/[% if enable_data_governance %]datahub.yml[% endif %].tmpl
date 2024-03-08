@@ -29,5 +29,5 @@ transformers:
 sink:
   type: "datahub-rest"
   config:
-    server: "https://gms.lakehouse-demo.getindata.dev"
+    server: ${DATAHUB_GMS_URL}
     token: ${DATAHUB_TOKEN}
